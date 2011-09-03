@@ -4,7 +4,7 @@
 
 from . import basebot
 from .listeners import (messagelistener, joinlistener, partlistener, pinglistener,
-                       quitlistener, kicklistener, versionlistener)
+                       quitlistener, kicklistener, versionlistener, nicklistener)
 
 
 class ChatBot(basebot.BaseBot):
@@ -19,6 +19,6 @@ class ChatBot(basebot.BaseBot):
         self.listeners = [messagelistener.MessageListener(), joinlistener.JoinListener(),
                           partlistener.PartListener(), pinglistener.PingListener(),
                           quitlistener.QuitListener(), kicklistener.KickListener(),
-                          versionlistener.VersionListener()]
+                          versionlistener.VersionListener(), nicklistener.NickListener()]
 
         self.currentData = ""
