@@ -1,0 +1,121 @@
+
+join #bottest
+<21:14> TestChatBot [tichybot@lsn-f8jt8c.stlsmo.sbcglobal.net] has joined #bottest
+join #underhalls
+<21:14> TestChatBot [tichybot@lsn-f8jt8c.stlsmo.sbcglobal.net] has joined #underhalls
+<21:14> [#underhalls]<ijontichy> you know
+<21:14> [#underhalls]<ijontichy> with my current setup for the bot
+<21:15> [#underhalls]<ijontichy> it would be fucking easy to add a gui to my bot controller
+<21:15> [#underhalls]<tm512> MODE #herpderpderp +v tm513
+<21:15> [#underhalls]<tm512> :tm513!~tm513@static-50-53-129-250.bvtn.or.frontiernet.net MODE #herpderpderp +v tm513
+<21:16> [#underhalls]<ijontichy> but
+<21:16> [#underhalls]<ijontichy> but
+<21:16> [#underhalls]<ijontichy> whaaat
+<21:16> PING from crimson.lostsig.net
+<21:18> [#underhalls]<tm512> http://www.youtube.com/watch?v=KXfarZQGPJE
+<21:18> PING from crimson.lostsig.net
+<21:19> [#underhalls]<ijontichy> WARNING
+<21:19> [#underhalls]<ijontichy> SUPERMARIOFAN IS GETTING EVEN DUMBER
+<21:19> [#underhalls]<ijontichy> THAT SHOULDN'T EVEN BE POSSIBLE
+<21:19> [#underhalls]<tm512> let's make bets
+<21:19> [#underhalls]<ijontichy> test
+<21:19> [#underhalls]<tm512> on when (s)he gets banned
+<21:20> [#underhalls]<ijontichy> hmm
+<21:20> PING from crimson.lostsig.net
+<21:20> [#underhalls]<ijontichy> well, he's been around for only a month and he's already the bonafide village idiot
+<21:21> [#underhalls]<ijontichy> I give him another
+<21:21> [#underhalls]<ijontichy> after that, I'm f'd
+<21:21> [#underhalls]<tm512> a month, already?
+<21:21> [#underhalls]<tm512> less than
+<21:21> [#underhalls]<ijontichy> almost a month
+<21:21> [#underhalls]<ijontichy> well, a week short of a month
+<21:21> [#underhalls]<ijontichy> but that's close enough :P
+<21:22> [#underhalls]<ijontichy> so with that in mind
+<21:22> [#underhalls]<tm512> HE'S GOING FULL RETARD, WE'LL HAVE TO EVACUATE
+<21:22> [#underhalls]<tm512> AAAAAAAAAAAAAAAAAAAAAA
+<21:22> [#underhalls]<ijontichy> I lower it to 18 days
+<21:22> PING from crimson.lostsig.net
+<21:22> [#underhalls]<ijontichy> wait, no, 3 weeks
+<21:22> [#underhalls]<tm512> 7.87 posts/day
+<21:23> [#underhalls]<ijontichy> oh yeah
+<21:23> [#underhalls]<ijontichy> you know, I've been raising my posts/day rate a fair bit lately
+<21:23> [#underhalls]<ijontichy> I'm still at 1.2 p/d
+<21:23> [#underhalls]<ijontichy> and I have exactly 400
+<21:24> PING from crimson.lostsig.net
+<21:24> [#underhalls]<ijontichy> also you can actually make sense of my avatar :V
+<21:24> [#underhalls]<ijontichy> his, I have to stare at closely and squint to get any form
+<21:24> [#underhalls]<ijontichy> and I have no clue what it is
+<21:25> [#underhalls]<ijontichy> also, hasn't he been through three avatars so far?
+<21:25> [#underhalls]<tm512> iunno
+<21:25> [#underhalls]<tm512> http://www.skulltag.com/forum/memberlist.php?mode=viewprofile&u=8546
+<21:25> [#underhalls]<tm512> 0.45 posts/day
+<21:26> [#underhalls]<ijontichy> yeah, three
+<21:26> PING from crimson.lostsig.net
+<21:27> [#underhalls]<ijontichy> anyway, I'm sure everyone knew he was going to be dummkopf when they saw h(?:is|er) name
+<21:28> PING from crimson.lostsig.net
+<21:29> [#underhalls]<ijontichy> well goddammit
+<21:29> [#underhalls]<tm512> i need a new avatar
+<21:29> [#underhalls]<ijontichy> I have the only wired connection in the house
+<21:29> [#underhalls]<ijontichy> and my dad's basically saying he's gonna remove that
+<21:29> [#underhalls]<tm512> my one before this was Link doing the "DAT ASS" face
+<21:29> [#underhalls]<tm512> why?
+<21:29> [#underhalls]<ijontichy> because I have to use a wired switch
+<21:29> [#underhalls]<ijontichy> we don't have a cable long enough
+<21:30> [#underhalls]<tm512> what's so bad about wireless?
+<21:30> [#underhalls]<ijontichy> and he's complaining about electricity bills
+<21:30> [#underhalls]<ijontichy> well, here's the thing
+<21:30> [#underhalls]<ijontichy> I get 1MB/s download speeds with wired
+<21:30> [#underhalls]<ijontichy> I get 80KB/s download speeds with wireless
+<21:30> [#underhalls]<ijontichy> with my netbook
+<21:30> [#underhalls]<ijontichy> I have no clue why :|
+<21:30> [#underhalls]<tm512> that doesnt make any sense
+<21:30> PING from crimson.lostsig.net
+<21:30> [#underhalls]<ijontichy> well, that's how it happens
+<21:30> [#underhalls]<ijontichy> and anyway
+<21:31> [#underhalls]<ijontichy> wired is generally speedier
+<21:31> [#underhalls]<ijontichy> and you don't have to deal with password and scanning bullshit
+<21:31> [#underhalls]<ijontichy> just plug it into the router and you're good to go
+<21:31> [#underhalls]<tm512> wifi: http://www.speedtest.net/result/1463537976.png
+<21:32> [#underhalls]<ijontichy> :|
+<21:32> [#underhalls]<ijontichy> I want that connection so damned much
+<21:32> [#underhalls]<tm512> I could get wired, but meh
+<21:32> [#underhalls]<tm512> you don't
+<21:32> [#underhalls]<ijontichy> um
+<21:32> [#underhalls]<tm512> because
+<21:32> [#underhalls]<ijontichy> I get 1MB/150KB
+<21:32> PING from crimson.lostsig.net
+<21:32> [#underhalls]<tm512> it would include the routing
+<21:32> [#underhalls]<tm512> and the routing around here, is complete ass
+<21:32> [#underhalls]<ijontichy> I don't care
+<21:33> [#underhalls]<ijontichy> those are impressive speeds for me
+<21:33> [#underhalls]<tm512> the speeds of Frontier are impressive yes
+<21:33> [#underhalls]<ijontichy> wait, megabit
+<21:33> [#underhalls]<ijontichy> never mind
+<21:33> [#underhalls]<ijontichy> mine's close enough :V
+<21:33> [#underhalls]<tm512> well
+<21:34> [#underhalls]<ijontichy> if it were megaBYTE, then we'd be talking
+<21:34> [#underhalls]<tm512> when a torrent here goes fast
+<21:34> [#underhalls]<tm512> it's around 2MB/s
+<21:34> [#underhalls]<tm512> or 3MB/s
+<21:34> PING from crimson.lostsig.net
+<21:34> [#underhalls]<tm512> the fastest speedtest I've seen off my HOME connection (same ISP, but im further from the router),
+<21:34> [#underhalls]<tm512> 40Mb/s
+<21:34> [#underhalls]<ijontichy> okay that's weird
+<21:35> [#underhalls]<ijontichy> my netbook downloads it pretty quickly down here
+<21:35> [#underhalls]<ijontichy> but upstairs, network speeds are ASS
+<21:36> [#underhalls]<ijontichy> and wired connections do seem a tad bit faster
+<21:36> [#underhalls]<tm512> they are
+<21:36> [#underhalls]<ijontichy> pinging google is about a ms or two faster with wired
+<21:36> [#underhalls]<tm512> and for anything LAN related, you cant beat wired
+<21:36> [#underhalls]<ijontichy> and that probably fucking adds up with gaming
+<21:36> PING from crimson.lostsig.net
+<21:36> [#underhalls]<ijontichy> (necessary fuck, I know)
+<21:36> [#underhalls]<ijontichy> two more for the logs
+<21:37> [#underhalls]<ijontichy> anyway, wireless just makes me paranoid sometimes
+<21:38> [#underhalls]<ijontichy> 'specially considering that it's directionless
+<21:38> PING from crimson.lostsig.net
+<21:38> [#underhalls]<ijontichy> and unless I want to make a cantenna :V
+<21:38> [#underhalls]<tm512> heh, fastest upload i've seen here is 20Mb/s
+<21:38> [#underhalls]<tm512> or so
+<21:40> PING from crimson.lostsig.net
+<21:40> [#underhalls]<ijontichy> right then

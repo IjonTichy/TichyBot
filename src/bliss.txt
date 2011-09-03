@@ -1,0 +1,232 @@
+:spectre.skulltag.net NOTICE Auth :*** Looking up your hostname...
+:spectre.skulltag.net NOTICE Auth :*** Found your hostname (99-117-244-124.lightspeed.stlsmo.sbcglobal.net) -- cached
+['spectre.skulltag.net', 'NOTICE', 'Auth', ':*** Looking up your hostname...']
+['spectre.skulltag.net', 'NOTICE', 'Auth', ':*** Found your hostname (99-117-244-124.lightspeed.stlsmo.sbcglobal.net) -- cached']
+:spectre.skulltag.net NOTICE Auth :*** Looking up your ident...
+['spectre.skulltag.net', 'NOTICE', 'Auth', ':*** Looking up your ident...']
+:spectre.skulltag.net NOTICE Auth :*** Ident request timed out.
+:spectre.skulltag.net NOTICE Auth :Welcome to Skulltag!
+:spectre.skulltag.net 001 TestTichyBot :Welcome to the Skulltag IRC Network TestTichyBot!~tichybot@99-117-244-124.lightspeed.stlsmo.sbcglobal.net
+:spectre.skulltag.net 002 TestTichyBot :Your host is spectre.skulltag.net, running version InspIRCd-1.2
+:spectre.skulltag.net 003 TestTichyBot :This server was created 22:32:29 Jun 20 2011
+:spectre.skulltag.net 004 TestTichyBot spectre.skulltag.net InspIRCd-1.2 BHIRSWcdghikorsw ACDFIJKLMNOPQRSTbcefghijklmnoprstuvz FIJLbefghjklov
+:spectre.skulltag.net 005 TestTichyBot WALLCHOPS WALLVOICES MODES=31 CHANTYPES=# PREFIX=(ohv)@%+ MAP MAXCHANNELS=100 MAXBANS=60 VBANLIST NICKLEN=32 CASEMAPPING=rfc1459 STATUSMSG=@%+ CHARSET=ascii :are supported by this server
+:spectre.skulltag.net 005 TestTichyBot TOPICLEN=420 KICKLEN=420 MAXTARGETS=15 AWAYLEN=300 CHANMODES=Ibeg,k,FJLfjl,ACDKMNOPQRSTcimnprstuz FNC NETWORK=Skulltag MAXPARA=32 ELIST=MU EXTBAN=,SMROTpNQCmrjcA EXCEPTS=e CALLERID=g INVEX=I :are supported by this server
+:spectre.skulltag.net 005 TestTichyBot NAMESX OPERLOG OVERRIDE REMOVE SECURELIST SSL=96.126.115.61:6679;96.126.115.61:9999;2600:3c00::f03c:91ff:fe93:b98d:6679;2600:3c00::f03c:91ff:fe93:b98d:9999 ESILENCE SILENCE=64 UHNAMES USERIP WATCH=64 :are supported by this server
+:spectre.skulltag.net 042 TestTichyBot 129AAAPU2 :your unique ID
+['spectre.skulltag.net', 'NOTICE', 'Auth', ':*** Ident request timed out.']
+['spectre.skulltag.net', 'NOTICE', 'Auth', ':Welcome to \x02Skulltag\x02!']
+['spectre.skulltag.net', '001', 'TestTichyBot', ':Welcome to the Skulltag IRC Network TestTichyBot!~tichybot@99-117-244-124.lightspeed.stlsmo.sbcglobal.net']
+['spectre.skulltag.net', '002', 'TestTichyBot', ':Your host is spectre.skulltag.net, running version InspIRCd-1.2']
+['spectre.skulltag.net', '003', 'TestTichyBot', ':This', 'server', 'was', 'created', '22:32', ':29 Jun 20 2011']
+['spectre.skulltag.net 004 TestTichyBot spectre.skulltag.net InspIRCd-1.2 BHIRSWcdghikorsw ACDFIJKLMNOPQRSTbcefghijklmnoprstuvz FIJLbefghjklov']
+['spectre.skulltag.net', '005', 'TestTichyBot', 'WALLCHOPS', 'WALLVOICES', 'MODES=31', 'CHANTYPES=#', 'PREFIX=(ohv)@%+', 'MAP', 'MAXCHANNELS=100', 'MAXBANS=60', 'VBANLIST', 'NICKLEN=32', 'CASEMAPPING=rfc1459', 'STATUSMSG=@%+', 'CHARSET=ascii', ':are supported by this server']
+['spectre.skulltag.net', '005', 'TestTichyBot', 'TOPICLEN=420', 'KICKLEN=420', 'MAXTARGETS=15', 'AWAYLEN=300', 'CHANMODES=Ibeg,k,FJLfjl,ACDKMNOPQRSTcimnprstuz', 'FNC', 'NETWORK=Skulltag', 'MAXPARA=32', 'ELIST=MU', 'EXTBAN=,SMROTpNQCmrjcA', 'EXCEPTS=e', 'CALLERID=g', 'INVEX=I', ':are supported by this server']
+['spectre.skulltag.net', '005', 'TestTichyBot', 'NAMESX', 'OPERLOG', 'OVERRIDE', 'REMOVE', 'SECURELIST', 'SSL=96.126.115.61:6679;96.126.115.61:9999;2600:3c00::f03c:91ff:fe93:b98d:6679;2600:3c00::f03c:91ff:fe93:b98d:9999', 'ESILENCE', 'SILENCE=64', 'UHNAMES', 'USERIP', 'WATCH=64', ':are supported by this server']
+['spectre.skulltag.net', '042', 'TestTichyBot', '129AAAPU2', ':your unique ID']
+:spectre.skulltag.net 375 TestTichyBot :spectre.skulltag.net message of the day
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-                  _          _ _ _                           _
+:spectre.skulltag.net 372 TestTichyBot :-              ___| | ___   _| | | |_ __ _  __ _   _ __   ___| |_
+:spectre.skulltag.net 372 TestTichyBot :-             / __| |/ / | | | | | __/ _` |/ _` | | '_ \ / _ \ __|
+:spectre.skulltag.net 372 TestTichyBot :-             \__ \   <| |_| | | | || (_| | (_| |_| | | |  __/ |_
+:spectre.skulltag.net 372 TestTichyBot :-             |___/_|\_\\__,_|_|_|\__\__,_|\__, (_)_| |_|\___|\__|
+:spectre.skulltag.net 372 TestTichyBot :-              Spectre                     |___/       Dallas, TX
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :- Welcome to irc.skulltag.net! Your use of these services is bound by certain
+:spectre.skulltag.net 372 TestTichyBot :- applicable laws in your jurisdiction.
+:spectre.skulltag.net 372 TestTichyBot :-      ___________________________________________________________________
+:spectre.skulltag.net 372 TestTichyBot :-     |                                                                   |
+['spectre.skulltag.net', '375', 'TestTichyBot', ':spectre.skulltag.net message of the day']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-                  _          _ _ _                           _']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-              ___| | ___   _| | | |_ __ _  __ _   _ __   ___| |_']
+['spectre.skulltag.net', '372', 'TestTichyBot', ":-             / __| |/ / | | | | | __/ _` |/ _` | | '_ \\ / _ \\ __|"]
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-             \\__ \\   <| |_| | | | || (_| | (_| |_| | | |  __/ |_']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-             |___/_|\\_\\\\__,_|_|_|\\__\\__,_|\\__, (_)_| |_|\\___|\\__|']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-              Spectre                     |___/       Dallas, TX']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- Welcome to irc.skulltag.net! Your use of these services is bound by certain']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- applicable laws in your jurisdiction.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-      ___________________________________________________________________']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     |                                                                   |']
+:spectre.skulltag.net 372 TestTichyBot :-     | DISCLAIMER:                                                       |
+:spectre.skulltag.net 372 TestTichyBot :-     | By connecting to Skulltag, you aknowledge that you are connecting |
+:spectre.skulltag.net 372 TestTichyBot :-     | to a privately owned network, whose owners and operators have the |
+:spectre.skulltag.net 372 TestTichyBot :-     | rights to deny access or monitor connections at any time, for any |
+:spectre.skulltag.net 372 TestTichyBot :-     | reason. If you are found to be in violation of certain laws, full |
+:spectre.skulltag.net 372 TestTichyBot :-     | compliance will be offered to investigative authorities.          |
+:spectre.skulltag.net 372 TestTichyBot :-     |___________________________________________________________________|
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-                             GENERAL COMMON SENSE
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :- : Our users are expected to use common sense when using this network. We
+:spectre.skulltag.net 372 TestTichyBot :-    have all seen the "script kiddie" that likes to flood channels, flame
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', '|', 'DISCLAIMER', ':                                                       |']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     | By connecting to Skulltag, you aknowledge that you are connecting |']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     | to a privately owned network, whose owners and operators have the |']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     | rights to deny access or monitor connections at any time, for any |']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     | reason. If you are found to be in violation of certain laws, full |']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     | compliance will be offered to investigative authorities.          |']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     |___________________________________________________________________|']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-                             GENERAL COMMON SENSE']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', ': Our users are expected to use common sense when using this network. We']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    have all seen the "script kiddie" that likes to flood channels, flame']
+:spectre.skulltag.net 372 TestTichyBot :-    others, and tries to make himself look cool. Well, that behavior won't
+:spectre.skulltag.net 372 TestTichyBot :-    get you far here, and eventually it will get you removed, so don't do
+:spectre.skulltag.net 372 TestTichyBot :-    it.
+:spectre.skulltag.net 372 TestTichyBot :- : Be respectful of those around you. Abuse is not tolerated, and is dealt
+:spectre.skulltag.net 372 TestTichyBot :-    with sternly.
+:spectre.skulltag.net 372 TestTichyBot :- : All content presented on this network is the responsibility of the user
+:spectre.skulltag.net 372 TestTichyBot :-    from which the content is sourced. Skulltag takes no responsibility for
+:spectre.skulltag.net 372 TestTichyBot :-    anything you might see on this network, and in connecting to it, as you
+:spectre.skulltag.net 372 TestTichyBot :-    would any other network service, the network owners and operators shall
+:spectre.skulltag.net 372 TestTichyBot :-    hold no liability for the actions of our other users. Connect at your
+:spectre.skulltag.net 372 TestTichyBot :-    own risk!
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-                           NON-HUMAN/PROXY CLIENTS
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+['spectre.skulltag.net', '372', 'TestTichyBot', ":-    others, and tries to make himself look cool. Well, that behavior won't"]
+['spectre.skulltag.net', '372', 'TestTichyBot', ":-    get you far here, and eventually it will get you removed, so don't do"]
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    it.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', ': Be respectful of those around you. Abuse is not tolerated, and is dealt']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    with sternly.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', ': All content presented on this network is the responsibility of the user']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    from which the content is sourced. Skulltag takes no responsibility for']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    anything you might see on this network, and in connecting to it, as you']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    would any other network service, the network owners and operators shall']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    hold no liability for the actions of our other users. Connect at your']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    own risk!']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-                           NON-HUMAN/PROXY CLIENTS']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+:spectre.skulltag.net 372 TestTichyBot :- : Bots are allowed on Skulltag, so long as they are not abusive and do not
+:spectre.skulltag.net 372 TestTichyBot :-    violate any rules. Eggdrop bots really are not necessary due to the
+:spectre.skulltag.net 372 TestTichyBot :-    advent of channel services, and as such are discouraged, but are still
+:spectre.skulltag.net 372 TestTichyBot :-    allowed.
+:spectre.skulltag.net 372 TestTichyBot :- : Privately owned, secured proxies (such as BNC's) are allowed, as long as
+:spectre.skulltag.net 372 TestTichyBot :-    they are not used to evade channel or network bans. Evading channel
+:spectre.skulltag.net 372 TestTichyBot :-    bans, whether network owned or private, is a network-bannable offense.
+:spectre.skulltag.net 372 TestTichyBot :- : ANY AND ALL USE OF UNSECURED PROXIES IS STRICTLY PROHIBITED, AND WILL BE
+:spectre.skulltag.net 372 TestTichyBot :-    ENFORCED WITH THE USE OF A PROXY MONITOR SERVICE. If you are running an
+:spectre.skulltag.net 372 TestTichyBot :-    insecure proxy on your local machine, your access to this network will
+:spectre.skulltag.net 372 TestTichyBot :-    be removed without warning.
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-                                   CHANNELS
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', ': Bots are allowed on Skulltag, so long as they are not abusive and do not']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    violate any rules. Eggdrop bots really are not necessary due to the']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    advent of channel services, and as such are discouraged, but are still']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    allowed.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', ": Privately owned, secured proxies (such as BNC's) are allowed, as long as"]
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    they are not used to evade channel or network bans. Evading channel']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    bans, whether network owned or private, is a network-bannable offense.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', ': ANY AND ALL USE OF UNSECURED PROXIES IS STRICTLY PROHIBITED, AND WILL BE']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    ENFORCED WITH THE USE OF A PROXY MONITOR SERVICE. If you are running an']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    insecure proxy on your local machine, your access to this network will']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    be removed without warning.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-                                   CHANNELS']
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-    Network channels:
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-      #skulltag      Main channel for chatting about Skulltag stuff
+:spectre.skulltag.net 372 TestTichyBot :-      #staff         Help channel for Skulltag and IRC-related issues
+:spectre.skulltag.net 372 TestTichyBot :-      #stmapping     Need help with any aspect of mapping? Join here!
+:spectre.skulltag.net 372 TestTichyBot :-      #sttesting     Public development and testing discussion channel
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-    Type /list to see a list of available channels.
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-   Network Administrators:
+:spectre.skulltag.net 372 TestTichyBot :-     Konar6
+:spectre.skulltag.net 372 TestTichyBot :-     Cyber
+:spectre.skulltag.net 372 TestTichyBot :-     
+:spectre.skulltag.net 372 TestTichyBot :-   (Spectre) Server Operators:
+:spectre.skulltag.net 372 TestTichyBot :-     Dark-Slayer
+:spectre.skulltag.net 372 TestTichyBot :-     Tribeam
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', 'Network', 'channels', ':']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-      #skulltag      Main channel for chatting about Skulltag stuff']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-      #staff         Help channel for Skulltag and IRC-related issues']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-      #stmapping     Need help with any aspect of mapping? Join here!']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-      #sttesting     Public development and testing discussion channel']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-    Type /list to see a list of available channels.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', 'Network', 'Administrators', ':']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     Konar6']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     Cyber']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', '(Spectre)', 'Server', 'Operators', ':']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     Dark-Slayer']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     Tribeam']
+:spectre.skulltag.net 372 TestTichyBot :-     
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-   HostServ - A New IRC Service designed to give you a cool host name! To
+:spectre.skulltag.net 372 TestTichyBot :-     get started please use the following command:
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-       /msg HostServ Help Request
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-   Some rules:
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :-     1) Your desired host name must not resemble an IP address.
+:spectre.skulltag.net 372 TestTichyBot :-     2) If you use a domain name, you must provide proof that you own that
+:spectre.skulltag.net 372 TestTichyBot :-        domain. This is to prevent impersonation.
+:spectre.skulltag.net 372 TestTichyBot :-     3) No color codes allowed in the hostnames.
+:spectre.skulltag.net 372 TestTichyBot :-     4) You may not use "R-Rated" or anything higher in your hostname. Keep
+:spectre.skulltag.net 372 TestTichyBot :-        it clean!
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 372 TestTichyBot :- =============================================================================
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-   HostServ - A New IRC Service designed to give you a cool host name! To']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', 'get', 'started', 'please', 'use', 'the', 'following', 'command', ':']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-       /msg HostServ Help Request']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-', 'Some', 'rules', ':']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     1) Your desired host name must not resemble an IP address.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     2) If you use a domain name, you must provide proof that you own that']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-        domain. This is to prevent impersonation.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     3) No color codes allowed in the hostnames.']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-     4) You may not use "R-Rated" or anything higher in your hostname. Keep']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-        it clean!']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '372', 'TestTichyBot', ':- =============================================================================']
+:spectre.skulltag.net 372 TestTichyBot :-  
+:spectre.skulltag.net 376 TestTichyBot :End of message of the day.
+:spectre.skulltag.net 251 TestTichyBot :There are 70 users and 54 invisible on 4 servers
+:spectre.skulltag.net 252 TestTichyBot 18 :operator(s) online
+:spectre.skulltag.net 254 TestTichyBot 170 :channels formed
+:spectre.skulltag.net 255 TestTichyBot :I have 35 clients and 1 servers
+:spectre.skulltag.net 265 TestTichyBot :Current Local Users: 35  Max: 62
+:spectre.skulltag.net 266 TestTichyBot :Current Global Users: 124  Max: 184
+['spectre.skulltag.net', '372', 'TestTichyBot', ':-  ']
+['spectre.skulltag.net', '376', 'TestTichyBot', ':End of message of the day.']
+['spectre.skulltag.net', '251', 'TestTichyBot', ':There are 70 users and 54 invisible on 4 servers']
+['spectre.skulltag.net', '252', 'TestTichyBot', '18', ':operator(s) online']
+['spectre.skulltag.net', '254', 'TestTichyBot', '170', ':channels formed']
+['spectre.skulltag.net', '255', 'TestTichyBot', ':I have 35 clients and 1 servers']
+['spectre.skulltag.net', '265', 'TestTichyBot', ':Current', 'Local', 'Users:', '35', 'Max', ': 62']
+['spectre.skulltag.net', '266', 'TestTichyBot', ':Current', 'Global', 'Users:', '124', 'Max', ': 184']
+:NickServ!NickServ@hell.skulltag.net NOTICE TestTichyBot :Welcome to Skulltag, TestTichyBot! Here on Skulltag, we provide services to enable the registration of nicknames and channels! For details, type /msg NickServ help and /msg ChanServ help.
+['NickServ!NickServ@hell.skulltag.net', 'NOTICE', 'TestTichyBot', ':Welcome to Skulltag, TestTichyBot! Here on Skulltag, we provide services to enable the registration of nicknames and channels! For details, type \x02/msg NickServ help\x02 and \x02/msg ChanServ help\x02.']
+ERROR :Closing link: (~tichybot@99-117-244-124.lightspeed.stlsmo.sbcglobal.net) ["potato"]
+['ERROR', ':Closing', 'link', ': (~tichybot@99-117-244-124.lightspeed.stlsmo.sbcglobal.net) ["potato"]']
