@@ -27,7 +27,7 @@ class IRCCommand(object):
     @command.setter
     def command(self, new):
         assert isinstance(new, str), "command must be str, not {}".format(new.__class__.__name)
-        self.__command = new.upper()
+        self.__command = new.lower()
 
     @args.setter
     def args(self, new):
@@ -46,14 +46,16 @@ class IRCCommand(object):
 
     def __str__(self):
 
+        cmd = self.command.upper()
+
         if self.args and self.message:
-            return "{} {} :{}".format(self.command, " ".join(self.args),
-                                      self.message)
+            return "{} {} :{}".format(cmd, " ".join(self.args), self.message)
+
         elif self.args:
-            return "{} {}".format(self.command, " ".join(self.args))
+            return "{} {}".format(cmd, " ".join(self.args))
 
         elif self.message:
-            return "{} {}".format(self.command, self.message)
+            return "{} {}".format(cmd, self.message)
 
         else:
-            return "{}".format(self.command)
+            return "{}".format(cmd)

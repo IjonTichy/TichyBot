@@ -2,21 +2,26 @@
 
 # -*- coding: utf-8 -*-
 
-from . import basebot
-from .listeners import (messagelistener, joinlistener, partlistener, pinglistener,
-                       quitlistener, kicklistener, versionlistener, nicklistener,
-                       cannotsendlistener)
+from .. import basebot
+from ..listeners import (messagelistener, joinlistener, partlistener, pinglistener,
+                        quitlistener, kicklistener, versionlistener, nicklistener,
+                        cannotsendlistener, noticelistener)
+
+from ..tochan import    tochanlistener
+from ..storechan import storechanlistener
+
+from . import hangmanlistener
 
 
-class ChatBot(basebot.BaseBot):
+class HangmanBot(basebot.BaseBot):
 
     def __init__(self, server, port, master):
 
         super().__init__(server, port, master)
 
-        self.name      = "TestChatBot"
+        self.name      = "TestHangBot"
         self.uName     = "tichybot"
-        self.rName     = "Chat Tichy Bot"
+        self.rName     = "Hang Tichy Bot"
         self.listeners =[
                         messagelistener.MessageListener(),
                         noticelistener.NoticeListener(),
@@ -28,5 +33,6 @@ class ChatBot(basebot.BaseBot):
                         versionlistener.VersionListener(),
                         nicklistener.NickListener(),
                         cannotsendlistener.CannotSendListener(),
-                        hangmanlistener.HangmanListener()
+                        tochanlistener.ToChanListener(),
+                        storechanlistener.StoreChanListener()
                         ]

@@ -5,14 +5,18 @@
 from . import baselistener
 from .. import ircresponse
 
+# :ijontichy!~ijontichy@powernoob KICK #testbotcrap ijon :
+
 class KickListener(baselistener.BaseListener):
 
     def processLine(self, line):
 
-        leaveMsg = "{} {} [{}] has kicked {} from {} ({})"
+        leaveMsg = "{} [{}] has kicked {} from {} ({})"
 
         ret = ircresponse.IRCResponse(line)
 
         if ret.command == "kick":
 
-            self.master.log(leaveMsg.format(ret.cTimestamp, source, sourceHost, kicked, channel, reason))
+            channel, kicked = ret.args[0:2]
+
+            self.master.log(leaveMsg.format(ret.source, ret.sourceFull, kicked, channel, ret.message))

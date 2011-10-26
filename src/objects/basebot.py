@@ -9,8 +9,9 @@ import os
 from . import botthread
 from . import irccommand
 from .listeners import echolistener, argecholistener
+from functions import ansicodes
 
-BASELOGDIR = "/home/edrik/tichybot/logs"
+BASELOGDIR = os.path.abspath("../logs")
 
 class BaseBot(botthread.BotThread):
 
@@ -47,7 +48,7 @@ class BaseBot(botthread.BotThread):
             newLines = self.getNewLines()
 
             for listener in self.listeners:
-                response = listener.process(newLines, self)
+                listener.process(newLines, self)
 
             if ":Closing link:" in data:   # Connection ded :(
                 self.remove()
@@ -135,18 +136,16 @@ class BaseBot(botthread.BotThread):
 
         return ret2
 
-    def sendRaw(self, data):
 
-        data += "\n"
+    def sendCommand(self, commandObj):
 
+        for listener in self.listeners:
+            listener.processAction(commandObj, self)
+
+        data = str(commandObj) + "\n"
         sData = bytes(data, encoding="utf-8")
 
         self.socket.send(sData)
-
-
-    def sendCommand(self, commandObj):
-        self.sendRaw(str(commandObj))
-
 
     #######
     ###
@@ -156,7 +155,22 @@ class BaseBot(botthread.BotThread):
 
 
     def sendMessage(self, data):
-        self.sendRaw(data)
+
+        if not data:
+            return
+
+        dataSplit = data.partition(":")
+        dataList  = [i for i in dataSplit[0].split() if i]
+
+        try:
+            command = dataList[0]
+            args    = dataList[1:]
+            message = dataSplit[2]
+        except:
+            self.log("Invalid command '{}'".format(data) )
+        else:
+            ircCommand = irccommand.IRCCommand(command, args, message)
+            self.sendCommand(ircCommand)
 
 
     #######
@@ -166,7 +180,8 @@ class BaseBot(botthread.BotThread):
     #######
 
     def writeToLog(self, line):
-        date = time.strftime("%Y-%m-%d")
+        cTime      = time.gmtime()
+        cDate = time.strftime("%Y-%m-%d", cTime)
 
         logdir = BASELOGDIR
         olddir = os.getcwd()
@@ -178,7 +193,9 @@ class BaseBot(botthread.BotThread):
 
         os.chdir(logdir)
 
-        log = open(date + ".txt", "a")
+        line = ansicodes.stripCodes(line)
+
+        log = open(cDate + ".txt", "a")
         log.write(line + "\n")
         log.close()
 
@@ -187,9 +204,13 @@ class BaseBot(botthread.BotThread):
 
 
     def log(self, line):
+        cTime      = time.gmtime()
+        cTimestamp = time.strftime("<%H:%M>", cTime)
 
-        self.writeToLog(line)
-        print(line)
+        newline = "{} {}".format(cTimestamp, line)
+
+        self.writeToLog(newline)
+        print(newline)
 
 
     #######
@@ -200,13 +221,13 @@ class BaseBot(botthread.BotThread):
 
 
     def quit(self, reason):
-        self.sendData("QUIT :{}".format(reason) )
+        self.sendData("QUIT :\"{}\"".format(reason) )
         self.remove()
 
     def remove(self):
         cTime      = time.gmtime()
         cTimestamp = time.strftime("<%H:%M>", cTime)
 
-        self.log("{} !!! Exiting".format(cTimestamp) )
+        self.log("!!! Exiting")
         del self
 

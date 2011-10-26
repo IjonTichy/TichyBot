@@ -2,10 +2,12 @@
 
 # -*- coding: utf-8 -*-
 
-from . import baselistener
-from .. import ircresponse, ctcpmessage
+import os
 
-VERSIONDIR = "/home/edrik/tichybot/VERSION"
+from . import baselistener
+from .. import ircresponse, ctcpmessage, irccommand
+
+VERSIONDIR = os.path.abspath("../VERSION")
 
 vFile = open(VERSIONDIR, "r")
 version = vFile.read()

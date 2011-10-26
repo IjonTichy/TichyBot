@@ -27,7 +27,7 @@ class PingListener(baselistener.BaseListener):
 
             send = irccommand.IRCCommand("PONG", [], ret.source)
 
-            self.master.log(ping_)
+            # ~ self.master.log(ping_)
             self.master.sendCommand(send)
 
         #CTCP pings

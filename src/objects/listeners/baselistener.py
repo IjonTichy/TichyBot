@@ -28,5 +28,8 @@ class BaseListener(object):
 
         return "\n".join(ret)
 
+    def processAction(self, command, master):
+        pass
+
     def processLine(self, message):
         raise RuntimeError("processLine should not be run with {}".format(self.__class__.__name__) )

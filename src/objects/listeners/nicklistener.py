@@ -14,5 +14,10 @@ class NickListener(baselistener.BaseListener):
         ret = ircresponse.IRCResponse(line)
 
         if ret.command == "nick":
+            newNick = ret.args[0]
+            self.master.log(leaveMsg.format(ret.cTimestamp, ret.source, newNick) )
 
-            self.master.log(leaveMsg.format(ret.cTimestamp, ret.source, ret.args[0]) )
+            if ret.source == self.master.name:
+                self.master.name = newNick
+
+

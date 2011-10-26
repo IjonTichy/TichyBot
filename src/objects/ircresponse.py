@@ -17,6 +17,7 @@ class IRCResponse(object):
         self.parseCommand()
 
 
+
     def parseCommand(self):
 
         source     = ""
@@ -54,7 +55,7 @@ class IRCResponse(object):
 
                 msgSplit = msgList[0].split()
 
-                message= msgList[2]
+                message = msgList[2]
 
                 try:
                     source  = msgSplit[0]

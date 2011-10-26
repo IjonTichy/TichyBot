@@ -4,12 +4,17 @@
 
 from . import baselistener
 from .. import ircresponse
+from functions import ansicodes
+
+SB = ansicodes.BOLDON
+EB = ansicodes.BOLDOFF
 
 class PartListener(baselistener.BaseListener):
 
     def processLine(self, line):
 
-        leaveMsg = "{} {} [{}] has left {} ({})"
+        leaveMsg = ("{}", " [", "{}", "]", " has left " + SB + "{}" + EB, " (", "{}", ")")
+        leaveCol = ("G", "A", "6", "A", "-", "A", "-", "A")
 
         ret = ircresponse.IRCResponse(line)
 
@@ -17,7 +22,8 @@ class PartListener(baselistener.BaseListener):
 
             target = ret.args[0]
 
-            self.master.log(leaveMsg.format(ret.cTimestamp, ret.source,
-                                            ret.sourceFull, target, ret.message))
+            msg = ansicodes.mapColors(leaveMsg, leaveCol)
+
+            self.master.log(msg.format(ret.source, ret.sourceFull, target, ret.message))
 
 

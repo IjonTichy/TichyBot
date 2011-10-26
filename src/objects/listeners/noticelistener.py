@@ -3,34 +3,37 @@
 # -*- coding: utf-8 -*-
 
 from . import baselistener
-from .. import ircresponse, ircmessage, ctcpmessage
+from .. import ircresponse, ircnotice, ctcpnotice
 from functions import ansicodes
 
 SB = ansicodes.BOLDON
 EB = ansicodes.BOLDOFF
 
-class MessageListener(baselistener.BaseListener):
+class NoticeListener(baselistener.BaseListener):
 
     def processLine(self, line):
 
         isCTCP   = False
         isAction = False
+        channelMsg = ("-{0}:{1}- {2}", "!{0}:{1}! NOTICE: {2}", "-{0}- * {1} {2}")
+        serverChannelMsg = ("-N- {2}", "!N! {2}", "-N- * {1} {2}")
+
         channelMsgs =    (
-        ("[",  SB + "{0}" + EB,  "]",  "<",  SB + "{1}" + EB,  ">", " {2}"),
-        ("!",  SB + "{0}" + EB,  "!",  "<",  SB + "{1}" + EB,  ">", " {2}"),
-        ("[",  SB + "{0}" + EB,  "]",   " * ",  SB + "{1}" + EB,  " {2}"),
+        ("-",  SB + "{0}" + EB + ":" + SB + "{1}" + EB,  "-", " {2}"),
+        ("-",  SB + "{0}" + EB + ":" + SB + "{1}" + EB,  "-", SB + "NOTICE:" + EB + " {2}"),
+        ("-",  SB + "{0}" + EB,  "-",   " * ",  SB + "{1}" + EB,  " {2}"),
         )
 
         channelColors = (
-        ("6", "-",   "6",  "4",  "-",    "4", "-"),
-        ("3", "-",   "3",  "4",  "-",    "4", "-"),
-        ("6", "-",   "6",   "3", "-",    "-"),
+        ("1", "-", "1", "-"),
+        ("1", "-", "1", "-"),
+        ("1", "-", "1", "-"),
         )
 
         serverChannelMsgs = (
-        ("-", "!", "-", " {2}"),
-        ("-", "!", "-", " {2}"),
-        ("-", "!", "-", " *",  SB + " {1}" + EB + " {2}"),
+        ("-", "N", "-", " {2}"),
+        ("-", "N", "-", " {2}"),
+        ("-", "N", "-", " *",  SB + " {1}" + EB + " {2}"),
         )
 
         serverChannelColors = (
@@ -39,16 +42,15 @@ class MessageListener(baselistener.BaseListener):
         ("1", "B", "1", "D", "-"),
         )
 
-
         ret = ircresponse.IRCResponse(line)
 
-        if ret.canBeMessage:
-            ret = ircmessage.IRCMessage(line)
+        if ret.canBeNotice:
+            ret = ircnotice.IRCNotice(line)
 
             # Find message type
-            if ret.canBeCTCPMessage:
+            if ret.canBeCTCPNotice:
                 isCTCP = True
-                ret = ctcpmessage.CTCPMessage(line)
+                ret = ctcpnotice.CTCPNotice(line)
 
                 if ret.ctcpCommand == "action":
                     isAction = True
@@ -58,8 +60,6 @@ class MessageListener(baselistener.BaseListener):
 
             else:
                 endMsg = ret.message
-
-
 
             srcSplit = ret.source.split(".")
 
