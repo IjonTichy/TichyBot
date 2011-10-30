@@ -23,17 +23,18 @@ class MOTDListener(baselistener.BaseListener):
 
         ret = ircresponse.IRCResponse(line)
 
-        if ret.command == "372":
+        if ret.command == "372":   # MOTD
             isofmotd = True
             msg = motdMsg
             col = motdCol
 
-        elif ret.command == "375":
+        elif ret.command == "375": # start MOTD
             isofmotd = True
             msg = smotdMsg
             col = smotdCol
 
-        elif ret.command == "376":
+
+        elif ret.command == "376": # end MOTD
             isofmotd = True
             msg = emotdMsg
             col = emotdCol

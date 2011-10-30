@@ -8,7 +8,7 @@ from . import basebot
 from .listeners import (messagelistener, noticelistener, joinlistener,
                         partlistener, pinglistener, quitlistener, kicklistener,
                         versionlistener, nicklistener, cannotsendlistener,
-                        motdlistener)
+                        motdlistener, modelistener)
 
 
 class ChatBot(basebot.BaseBot):
@@ -31,4 +31,5 @@ class ChatBot(basebot.BaseBot):
                         nicklistener.NickListener(),
                         motdlistener.MOTDListener(),
                         cannotsendlistener.CannotSendListener(),
+                        modelistener.ModeListener(),
                         ]

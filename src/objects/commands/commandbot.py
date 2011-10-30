@@ -7,10 +7,9 @@ from objects import basebot
 from objects.listeners import (messagelistener, noticelistener, joinlistener,
                         partlistener, pinglistener, quitlistener, kicklistener,
                         versionlistener, nicklistener, cannotsendlistener,
-                        motdlistener)
+                        motdlistener, modelistener)
 
 from objects.commands import (messageversion, messageuptime)
-
 
 class CommandBot(basebot.BaseBot):
 
@@ -34,4 +33,5 @@ class CommandBot(basebot.BaseBot):
                         cannotsendlistener.CannotSendListener(),
                         messageversion.MessageVersion(),
                         messageuptime.MessageUptime(),
+                        modelistener.ModeListener(),
                         ]
