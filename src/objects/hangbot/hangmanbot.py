@@ -19,9 +19,9 @@ class HangmanBot(basebot.BaseBot):
 
         super().__init__(server, port, master)
 
-        self.name      = "TestHangBot"
+        self.name      = "tichybot"
         self.uName     = "tichybot"
-        self.rName     = "Hang Tichy Bot"
+        self.rName     = "Tichy Bot"
         self.listeners =[
                         messagelistener.MessageListener(),
                         noticelistener.NoticeListener(),
@@ -33,6 +33,4 @@ class HangmanBot(basebot.BaseBot):
                         versionlistener.VersionListener(),
                         nicklistener.NickListener(),
                         cannotsendlistener.CannotSendListener(),
-                        tochanlistener.ToChanListener(),
-                        storechanlistener.StoreChanListener()
                         ]

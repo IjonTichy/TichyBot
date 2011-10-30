@@ -4,16 +4,19 @@
 
 from . import baselistener
 from .. import ircresponse
+from functions import ansicodes
 
 class QuitListener(baselistener.BaseListener):
 
     def processLine(self, line):
 
-        leaveMsg = "{} {} [{}] has quit ({})"
+        leaveMsg = ("{} ", "[", "{}", "]", " has quit ", "(", "{}", ")")
+        leaveCol = ("6", "A", "-", "A", "-", "A", "-", "A")
 
         ret = ircresponse.IRCResponse(line)
 
         if ret.command == "quit":
 
-            self.master.log(leaveMsg.format(ret.cTimestamp, ret.source, ret.sourceFull,
-                                            ret.message) )
+            msg = ansicodes.mapColors(leaveMsg, leaveCol)
+
+            self.master.log(msg.format(ret.source, ret.sourceFull, ret.message) )

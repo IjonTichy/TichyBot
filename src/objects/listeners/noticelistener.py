@@ -4,7 +4,7 @@
 
 from . import baselistener
 from .. import ircresponse, ircnotice, ctcpnotice
-from functions import ansicodes
+from functions import ansicodes, highestresponse
 
 SB = ansicodes.BOLDON
 EB = ansicodes.BOLDOFF
@@ -15,13 +15,11 @@ class NoticeListener(baselistener.BaseListener):
 
         isCTCP   = False
         isAction = False
-        channelMsg = ("-{0}:{1}- {2}", "!{0}:{1}! NOTICE: {2}", "-{0}- * {1} {2}")
-        serverChannelMsg = ("-N- {2}", "!N! {2}", "-N- * {1} {2}")
 
         channelMsgs =    (
         ("-",  SB + "{0}" + EB + ":" + SB + "{1}" + EB,  "-", " {2}"),
         ("-",  SB + "{0}" + EB + ":" + SB + "{1}" + EB,  "-", SB + "NOTICE:" + EB + " {2}"),
-        ("-",  SB + "{0}" + EB,  "-",   " * ",  SB + "{1}" + EB,  " {2}"),
+        ("-",  SB + "{0}" + EB,  "-",   " * " + SB + "{1}" + EB + " {2}"),
         )
 
         channelColors = (
@@ -42,15 +40,13 @@ class NoticeListener(baselistener.BaseListener):
         ("1", "B", "1", "D", "-"),
         )
 
-        ret = ircresponse.IRCResponse(line)
+        ret = highestresponse.highestResponse(line)
 
-        if ret.canBeNotice:
-            ret = ircnotice.IRCNotice(line)
+        if ret.isNotice:
 
             # Find message type
-            if ret.canBeCTCPNotice:
+            if ret.isCTCPNotice:
                 isCTCP = True
-                ret = ctcpnotice.CTCPNotice(line)
 
                 if ret.ctcpCommand == "action":
                     isAction = True

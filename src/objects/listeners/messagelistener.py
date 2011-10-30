@@ -4,7 +4,7 @@
 
 from . import baselistener
 from .. import ircresponse, ircmessage, ctcpmessage
-from functions import ansicodes
+from functions import ansicodes, highestresponse
 
 SB = ansicodes.BOLDON
 EB = ansicodes.BOLDOFF
@@ -40,15 +40,13 @@ class MessageListener(baselistener.BaseListener):
         )
 
 
-        ret = ircresponse.IRCResponse(line)
+        ret = highestresponse.highestResponse(line)
 
-        if ret.canBeMessage:
-            ret = ircmessage.IRCMessage(line)
+        if ret.isMessage:
 
             # Find message type
-            if ret.canBeCTCPMessage:
+            if ret.isCTCPMessage:
                 isCTCP = True
-                ret = ctcpmessage.CTCPMessage(line)
 
                 if ret.ctcpCommand == "action":
                     isAction = True

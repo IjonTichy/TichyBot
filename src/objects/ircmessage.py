@@ -17,7 +17,8 @@ class IRCMessage(ircresponse.IRCResponse):
 
 
     def messagify(self):
-        """The name's messagify simply because I felt like it. Deal with it."""
+        """Special initialisation for IRCMessage
+The name's messagify simply because I felt like it. Deal with it."""
 
         if self.command != "privmsg":
             raise InvalidIRCMessage("not a PRIVMSG")

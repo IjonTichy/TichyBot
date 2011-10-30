@@ -17,7 +17,8 @@ class CTCPMessage(ircmessage.IRCMessage):
 
 
     def ctcpify(self):
-        """Again, I felt like giving it this stupid name. DEAL WIT IT"""
+        """Special initialisation for CTCPMessage
+Again, I felt like giving it this stupid name. DEAL WIT IT"""
 
         if not (self.message.startswith("\x01") and self.message.endswith("\x01")):
             raise InvalidCTCPMessage("not a CTCP message")

@@ -4,18 +4,23 @@
 
 from . import baselistener
 from .. import ircresponse
+from functions import ansicodes
 
 class NickListener(baselistener.BaseListener):
 
     def processLine(self, line):
 
-        leaveMsg = "{} {} is now known as {}"
+        leaveMsg = ("{}", " is now known as ", "{}")
+        leaveCol = ("6",  "-",                 "G")
 
         ret = ircresponse.IRCResponse(line)
 
         if ret.command == "nick":
             newNick = ret.args[0]
-            self.master.log(leaveMsg.format(ret.cTimestamp, ret.source, newNick) )
+
+            msg = ansicodes.mapColors(leaveMsg, leaveCol)
+
+            self.master.log(msg.format(ret.source, newNick) )
 
             if ret.source == self.master.name:
                 self.master.name = newNick

@@ -4,7 +4,7 @@
 
 from objects import botcontroller
 from objects import basebot, chatbot
-from objects.hangbot import hangmanbot
+from objects.commands import commandbot
 
 SERVER = "crimson.lostsig.net"
 # ~ SERVER = "irc.skulltag.com"
@@ -13,9 +13,9 @@ PORT   = 6667
 if __name__ == "__main__":
     controller = botcontroller.BotController()
 
-    bot = hangmanbot.HangmanBot(SERVER, PORT, controller)
+    bot = commandbot.CommandBot(SERVER, PORT, controller)
     # ~ bot = chatbot.ChatBot(SERVER, PORT, controller)
-    # ~ bot = basebot.BaseBot(SERVER, PORT)
+    # ~ bot = basebot.BaseBot(SERVER, PORT, controller)
 
     botNum = controller.startBot(bot)
 

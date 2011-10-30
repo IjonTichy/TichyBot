@@ -2,9 +2,9 @@
 
 # -*- coding: utf-8 -*-
 
-from ..objects import ircresponse, ircmessage, ctcpmessage, ctcpnotice
+from objects import ircresponse, ircmessage, ircnotice, ctcpmessage, ctcpnotice
 
-def highestResponse(response):
+def highestResponse(line):
     ret = ircresponse.IRCResponse(line)
 
     if ret.canBeMessage:

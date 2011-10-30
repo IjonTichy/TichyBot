@@ -6,13 +6,10 @@ import os
 
 from . import baselistener
 from .. import ircresponse, ctcpmessage, irccommand
+from functions import getversion
 
-VERSIONDIR = os.path.abspath("../VERSION")
-
-vFile = open(VERSIONDIR, "r")
-version = vFile.read()
-version = version.strip()
-vFile.close()
+VERSIONDIR = os.getenv("HOME") + "/tichybot/VERSION"
+version = getversion.getVersion(VERSIONDIR)
 
 class VersionListener(baselistener.BaseListener):
 

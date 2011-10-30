@@ -17,7 +17,8 @@ class IRCNotice(ircresponse.IRCResponse):
 
 
     def noticeify(self):
-        """These names are now a running gag."""
+        """Special initialisation for IRCNotice
+These names are now a running gag."""
 
         if self.command != "notice":
             raise InvalidIRCNotice("not a PRIVMSG")

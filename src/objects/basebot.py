@@ -8,7 +8,9 @@ import time
 import os
 from . import botthread
 from . import irccommand
-from .listeners import echolistener, argecholistener
+from .listeners import (echolistener, argecholistener, pinglistener,
+                        nickfaillistener)
+
 from functions import ansicodes
 
 BASELOGDIR = os.path.abspath("../logs")
@@ -22,10 +24,18 @@ class BaseBot(botthread.BotThread):
         self.server    = server
         self.port      = port
         self.socket    = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.name      = "TestTichyBot"
+        self.name      = "tichybot"
         self.uName     = "tichybot"
-        self.rName     = "Test Tichy Bot"
-        self.listeners = [echolistener.EchoListener(), argecholistener.ArgEchoListener()]
+        self.rName     = "Tichy Bot"
+        self.essential = [
+                          pinglistener.PingListener(),
+                          nickfaillistener.NickFailListener(),
+                         ]
+
+        self.listeners = [
+                          #echolistener.EchoListener(),
+                          argecholistener.ArgEchoListener()
+                         ]
 
         self.currentData = ""
 
@@ -47,10 +57,10 @@ class BaseBot(botthread.BotThread):
             self.addToData(data)
             newLines = self.getNewLines()
 
-            for listener in self.listeners:
+            for listener in self.essential + self.listeners:
                 listener.process(newLines, self)
 
-            if ":Closing link:" in data:   # Connection ded :(
+            if data.startswith("ERROR :Closing link:"):   # Connection ded :(
                 self.remove()
                 return
 
@@ -71,26 +81,12 @@ class BaseBot(botthread.BotThread):
         nickSend = irccommand.IRCCommand("NICK", [], "")
         userSend = irccommand.IRCCommand("USER", [self.uName, self.uName, "*"], self.rName)
 
+        self.sendCommand(userSend)
+
         self.receiveData()
 
-        response = ":Nickname is already in use."
-
-        tName = self.name
-
-        while True:
-            nickSend.args = [tName]
-            self.sendCommand(nickSend)
-
-            response = self.receiveData()
-
-            if ":Nickname is already in use." in response:
-                tName += "_"
-            else:
-                break
-
-        self.name = tName
-
-        self.sendCommand(userSend)
+        nickSend = irccommand.IRCCommand("NICK", [self.name], "")
+        self.sendCommand(nickSend)
 
     #######
     ###
@@ -116,10 +112,10 @@ class BaseBot(botthread.BotThread):
     #######
 
 
-    def receiveData(self, buf=4096, timeout=1):
+    def receiveData(self, buf=2**16, timeout=0):
 
         try:
-            ret = self.socket.recv(buf)
+            ret = self.socket.recv(buf, timeout)
 
         except socket.error:
             ret = b""

@@ -17,7 +17,8 @@ class CTCPNotice(ircnotice.IRCNotice):
 
 
     def ctcpify(self):
-
+        """Special initialisation for CTCPNotice
+It's useless /and/ boring - isn't that just great?"""
 
         if not (self.message.startswith("\x01") and self.message.endswith("\x01")):
             raise InvalidCTCPNotice("not a CTCP notice")
