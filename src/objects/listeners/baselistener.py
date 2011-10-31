@@ -8,7 +8,6 @@ class BaseListener(object):
 
     def __init__(self):
         self.master = None
-        pass
 
 
     def process(self, message, master):

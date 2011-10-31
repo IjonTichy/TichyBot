@@ -24,15 +24,36 @@ class MessageCommand(baselistener.BaseListener):
         else:
             toChan = False
 
-        if msg.startswith(self.__class__.TRIGGER):
+        trigger = self.__class__.TRIGGER
+        toMe = False
 
+        if isinstance(trigger, str):
+            if msg.startswith(self.__class__.TRIGGER):
+                toMe = True
+
+        elif isinstance(trigger, (list, tuple)):
+
+            for i in trigger:
+                if msg.startswith(i):
+                    toMe = True
+                    break        # we're done here
+
+        if toMe:
             response = self.respond(ret)
 
-            cmd = irccommand.IRCCommand("PRIVMSG", [], response)
+            if not response:
+                return
+
+            cmd = irccommand.IRCCommand("PRIVMSG", [], "")
 
             if toChan:
                 cmd.args = [rec]
             else:
                 cmd.args = [src]
 
-            self.master.sendCommand(cmd)
+            for line in response.split("\n"):
+                line = line.rstrip()
+
+                if line:
+                    cmd.message = line
+                    self.master.sendCommand(cmd)

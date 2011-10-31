@@ -11,7 +11,7 @@ class QuitListener(baselistener.BaseListener):
     def processLine(self, line):
 
         leaveMsg = ("{} ", "[", "{}", "]", " has quit ", "(", "{}", ")")
-        leaveCol = ("6", "A", "-", "A", "-", "A", "-", "A")
+        leaveCol = ("6", "A", "6", "A", "-", "A", "-", "A")
 
         ret = ircresponse.IRCResponse(line)
 
