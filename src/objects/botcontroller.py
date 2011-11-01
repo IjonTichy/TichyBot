@@ -25,25 +25,6 @@ class BotController(object):
     ###
     #######
 
-    @property
-    def server(self):
-        return self.__server
-
-    @property
-    def port(self):
-        return self.__port
-
-    @server.setter
-    def server(self, new):
-
-        assert isinstance(new, str), "server must be str, not {}".format(new.__class__.__name)
-        self.__server = new
-
-    @port.setter
-    def port(self, new):
-
-        assert isinstance(new, int), "port must be int, not {}".format(new.__class__.__name)
-        self.__port = new
 
     @property
     def childBots(self):
