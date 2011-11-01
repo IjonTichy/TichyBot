@@ -9,7 +9,7 @@ import os
 from . import botthread
 from . import irccommand
 from .listeners import (echolistener, argecholistener, pinglistener,
-                        nickfaillistener)
+                        selfnicklistener, nickfaillistener, versionlistener)
 
 from functions import ansicodes
 
@@ -30,6 +30,8 @@ class BaseBot(botthread.BotThread):
         self.essential = [
                           pinglistener.PingListener(),
                           nickfaillistener.NickFailListener(),
+                          selfnicklistener.SelfNickListener(),
+                          versionlistener.VersionListener(),
                          ]
 
         self.listeners = [
@@ -217,8 +219,8 @@ class BaseBot(botthread.BotThread):
 
 
     def quit(self, reason):
-        self.sendData("QUIT :\"{}\"".format(reason) )
-        self.remove()
+        quitCommand = irccommand.IRCCommand("QUIT", [], reason)
+        self.sendCommand(quitCommand)
 
     def remove(self):
         cTime      = time.gmtime()

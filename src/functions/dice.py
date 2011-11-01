@@ -38,12 +38,10 @@ def main(dieRaw):
         dieSum *= dies[1]
         totalDieSum += dieSum
 
-        if len(dieRaw) > 1:
-            ret.append("{}->{}".format(dieStr, dieSum))
-            ret.append("total - {}".format(totalDieSum))
+        ret.append("{}->{}".format(dieStr, dieSum))
 
-        else:
-            ret.append("{}->{}".format(dieStr, dieSum))
+    if len(dieRaw) > 1:
+        ret.append("total - {}".format(totalDieSum))
 
     return " :: ".join(ret)
 

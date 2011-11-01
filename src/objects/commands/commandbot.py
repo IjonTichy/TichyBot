@@ -11,7 +11,7 @@ from objects.listeners import (messagelistener, noticelistener, joinlistener,
 
 from objects.commands import (messageversion, messageuptime, messagedice,
                               messagefortune, messagebc, messageinfo,
-                              messageroulette, messagehelp)
+                              messageroulette, messagehelp, messagecontroller)
 
 class CommandBot(basebot.BaseBot):
 
@@ -21,26 +21,26 @@ class CommandBot(basebot.BaseBot):
 
         self.name      = "tichybot"
         self.uName     = "tichybot"
-        self.rName     = "Chat Tichy Bot"
+        self.rName     = "Tichybot"
         self.listeners =[
-                        messagelistener.MessageListener(),
-                        noticelistener.NoticeListener(),
-                        joinlistener.JoinListener(),
-                        partlistener.PartListener(),
-                        quitlistener.QuitListener(),
-                        kicklistener.KickListener(),
-                        versionlistener.VersionListener(),
-                        nicklistener.NickListener(),
-                        motdlistener.MOTDListener(),
-                        cannotsendlistener.CannotSendListener(),
-                        modelistener.ModeListener(),
-                        topiclistener.TopicListener(),
+                        # ~ messagelistener.MessageListener(),
+                        # ~ noticelistener.NoticeListener(),
+                        # ~ joinlistener.JoinListener(),
+                        # ~ partlistener.PartListener(),
+                        # ~ quitlistener.QuitListener(),
+                        # ~ kicklistener.KickListener(),
+                        # ~ nicklistener.NickListener(),
+                        # ~ motdlistener.MOTDListener(),
+                        # ~ cannotsendlistener.CannotSendListener(),
+                        # ~ modelistener.ModeListener(),
+                        # ~ topiclistener.TopicListener(),
                         messageversion.MessageVersion(),
                         messagehelp.MessageHelp(),
                         messageinfo.MessageInfo(),
                         messageuptime.MessageUptime(),
-                        messagefortune.MessageFortune(),
                         messagebc.MessageBC(),
                         messagedice.MessageDice(),
+                        messagefortune.MessageFortune(),
                         messageroulette.MessageRoulette(),
+                        messagecontroller.MessageController(),
                         ]

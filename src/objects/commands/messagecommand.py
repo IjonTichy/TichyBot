@@ -56,4 +56,5 @@ class MessageCommand(baselistener.BaseListener):
 
                 if line:
                     cmd.message = line
+                    print(cmd)
                     self.master.sendCommand(cmd)
