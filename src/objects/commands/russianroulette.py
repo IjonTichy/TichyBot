@@ -2,59 +2,81 @@
 # -*- coding: utf-8 -*-
 
 import random
+
+class Full(Exception): pass
+class InvalidChamber(Exception): pass
+
 class RussianRoulette(object):
 
     def __init__(self, chambers=6):
         self.chambers = chambers
-        self.chamber  = 1
-        self.loaded   = False
+        self.chamber  = 0
+        self.bullets  = [False] * self.chambers
 
         self.loadBullet()
         self.spinChambers(10, 20)
 
 
     def loadBullet(self):
-        self.bullet = (self.chambers // 2) + 1
-        self.loaded = True
+        newBullet = 0
+
+        while self.bulletIn(newBullet):
+            newBullet += 1
+
+            if newBullet == self.chambers:
+                raise Full("no chambers left")
+
+        self.addBullet(newBullet)
+
 
     def spinChambers(self, low, hi):
-        spins   = random.randint(low, hi)
-        newBul  = (self.bullet + spins) % self.chambers
+        spins   = random.randint(low, hi) % self.chambers
 
-        if newBul == 0:
-            newBul = self.chambers
-
-        self.bullet = newBul
-        self.chamber = 1
+        self.__spin(spins)
 
 
     def fire(self):
         bang = False
 
-        if (self.chamber == self.bullet) and self.loaded:
+        if (self.bulletIn(0)) and self.loaded:
             bang = True
-            self.loaded = False
+            self.removeBullet(self.chamber)
 
-        self.chamber += 1
+        self.__spin(1)
 
         return bang
 
+    def bulletIn(self, chamber):
+        return True in self.bullets[chamber:chamber+1]
 
-    @property
-    def bullet(self):
-        return self.__bullet
 
-    @bullet.setter
-    def bullet(self, chamber):
-        assert 1 <= chamber <= self.chambers, "can't put bullet in nonexistent chamber {}".format(chamber)
-        self.__bullet = chamber
+    def addBullet(self, chamber):
+        if 0 > chamber or self.chambers <= chamber:
+            raise InvalidChamber()
+
+        self.bullets[chamber] = True
+
+
+    def removeBullet(self, chamber):
+        if 0 > chamber or self.chambers <= chamber:
+            raise InvalidChamber()
+
+        self.bullets[chamber] = False
+
+
+    def __spin(self, amount):
+
+        spinCount = amount % self.chambers
+
+        bul = self.bullets
+        bul = bul[-spinCount:] + bul[:-spinCount]
+        self.bullets = bul
 
 
     @property
     def loaded(self):
-        return self.__loaded
+        return True in self.bullets
 
-    @loaded.setter
-    def loaded(self, cond):
-        assert cond in (True, False), "must be loaded or not loaded, not {}".format(cond)
-        self.__loaded = cond
+    @property
+    def bulletCount(self):
+        return sum(self.bullets)

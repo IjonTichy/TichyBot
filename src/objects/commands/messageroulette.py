@@ -5,6 +5,10 @@
 from objects import irccommand
 from objects.commands import messagecommand, russianroulette
 from subprocess import PIPE, Popen
+from functions import ansicodes, pluralise
+
+SB = ansicodes.BOLDON
+EB = ansicodes.BOLDOFF
 
 helpStr = """
 Russian Roulette - needs kick privileges to function properly
@@ -51,7 +55,20 @@ class MessageRoulette(messagecommand.MessageCommand):
 
     def fire(self, response):
 
+        msg  = response.message
+        args = msg.split(" ")
+
         chan = response.target
+
+        if len(args) > 1:
+            target = args[1]
+        else:
+            target = response.source
+
+        if target == response.source:
+            atSelf = True
+        else:
+            atSelf = False
 
         if not chan.startswith("#"):
             return "Private games don't work too well."
@@ -61,15 +78,28 @@ class MessageRoulette(messagecommand.MessageCommand):
 
         game = self.games[chan]
 
+        if not game.loaded:
+            return "It's empty."
+
+        if not atSelf:
+            # Keep firing until we get a shot
+            while not game.fire(): pass
+
+            kickCommand = irccommand.IRCCommand("KICK", [response.target, response.source], "*BANG*")
+            self.master.sendCommand(kickCommand)
+            del self.games[chan]
+            return "{} got a bit trigger-happy. The gun is now worthless.".format(response.source)
+
         dead = game.fire()
 
         if dead:
             kickCommand = irccommand.IRCCommand("KICK", [response.target, response.source], "*BANG*")
             self.master.sendCommand(kickCommand)
 
-            return "{} loses.".format(response.source)
+            return "{} loses (and shouldn't be with us anymore).".format(target)
 
         else:
+
             return "The revolver clicks."
 
     def load(self, response):
@@ -85,9 +115,8 @@ class MessageRoulette(messagecommand.MessageCommand):
 
         game = self.games[chan]
 
-        if game.loaded:
-            game.loaded = False
-
+        if game.bulletCount == 6:
+            game.fire()
             kickCommand = irccommand.IRCCommand("KICK", [response.target, response.source], "*BANG*")
             self.master.sendCommand(kickCommand)
             return "{} looked into the barrel.".format(response.source)
@@ -109,10 +138,10 @@ class MessageRoulette(messagecommand.MessageCommand):
 
         game = self.games[chan]
 
-        if game.loaded:
-            return "The gun is loaded."
-        else:
-            return "The gun is empty."
+        bulletC = game.bulletCount
+        bulletW = pluralise.pluralise("bullet", bulletC)
+
+        return "The gun has {} {}.".format(bulletC, bulletW)
 
     def help(self, response):
         return helpStr
