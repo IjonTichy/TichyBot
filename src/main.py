@@ -14,9 +14,9 @@ if __name__ == "__main__":
     controller = botcontroller.BotController()
 
     bot1 = commandbot.CommandBot(SERVER1, PORT, controller)
-    bot2 = commandbot.CommandBot(SERVER2, PORT, controller)
+    #bot2 = commandbot.CommandBot(SERVER2, PORT, controller)
     # ~ bot = chatbot.ChatBot(SERVER, PORT, controller)
     # ~ bot = basebot.BaseBot(SERVER, PORT, controller)
 
     bot1Num = controller.startBot(bot1)
-    bot2Num = controller.startBot(bot2)
+    #bot2Num = controller.startBot(bot2)

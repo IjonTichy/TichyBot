@@ -24,6 +24,7 @@ class BaseBot(botthread.BotThread):
         self.server    = server
         self.port      = port
         self.socket    = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        
         self.name      = "tichybot"
         self.uName     = "tichybot"
         self.rName     = "Tichy Bot"
@@ -52,6 +53,7 @@ class BaseBot(botthread.BotThread):
 
     def run(self):
         self.connect()
+        self.socket.settimeout(60)
 
         while not self.stopped:
             data = self.receiveData()
@@ -114,10 +116,10 @@ class BaseBot(botthread.BotThread):
     #######
 
 
-    def receiveData(self, buf=2**16, timeout=0):
-
+    def receiveData(self):
+        
         try:
-            ret = self.socket.recv(buf, timeout)
+            ret = self.socket.recv(2**16)
 
         except socket.error:
             ret = b""
